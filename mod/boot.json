@@ -1,0 +1,52 @@
+{
+  "name": "TestModdedFeatsAddon",
+  "version": "1.0.0",
+  "styleFileList": [
+  ],
+  "scriptFileList_earlyload": [
+  ],
+  "scriptFileList_inject_early": [
+  ],
+  "scriptFileList_preload": [
+  ],
+  "scriptFileList": [
+  ],
+  "tweeFileList": [
+  ],
+  "imgFileList": [
+  ],
+  "imgFileReplaceList": [
+  ],
+  "additionFile": [
+    "feats.json5"
+  ],
+  "addonPlugin": [
+    {
+      "modName": "ModdedFeatsAddon",
+      "addonName": "ModdedFeatsAddon",
+      "modVersion": "^1.0.0",
+      "params": {
+        "feats": [
+          "feats.json5"
+        ]
+      }
+    },
+    {
+      "modName": "ModLoader DoL ImageLoaderHook",
+      "addonName": "ImageLoaderAddon",
+      "modVersion": "^2.3.0",
+      "params": [
+      ]
+    }
+  ],
+  "dependenceInfo": [
+    {
+      "modName": "ModdedFeatsAddon",
+      "version": "^1.0.0"
+    },
+    {
+      "modName": "ModLoader DoL ImageLoaderHook",
+      "version": "^2.3.0"
+    }
+  ]
+}

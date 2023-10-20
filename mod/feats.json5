@@ -1,0 +1,18 @@
+{
+  "Example Feats A": {
+    title: "Example Feats A",
+    desc: "this is the Example Feats A",
+    difficulty: 1,
+    series: "money",
+    filter: ["All", "General"],
+    softLockable: false
+  },
+  "Example Feats B": {
+    title: "Example Feats B",
+    desc: "this is the Example Feats B",
+    difficulty: 1,
+    series: "money",
+    filter: ["All", "General"],
+    softLockable: false
+  },
+}
