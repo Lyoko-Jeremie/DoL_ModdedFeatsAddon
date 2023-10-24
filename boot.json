@@ -1,6 +1,6 @@
 {
   "name": "ModdedFeatsAddon",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "styleFileList": [
   ],
   "scriptFileList_earlyload": [
@@ -46,7 +46,7 @@
   "dependenceInfo": [
     {
       "modName": "ModLoader",
-      "version": "^1.6.1"
+      "version": "^1.6.1||^2.0.0"
     },
     {
       "modName": "TweeReplacer",
