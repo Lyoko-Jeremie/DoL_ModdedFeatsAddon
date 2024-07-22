@@ -119,21 +119,31 @@ export class ModdedFeatsAddon implements LifeTimeCircleHook, AddonPluginHookPoin
 export function mergeFeatsObject(b: FeatsObject, o: FeatsObject, modName: string, logger: LogWrapper) {
     const out = cloneDeep(b);
     for (const k in o) {
-        if (has(out, k)) {
+        // if (has(out, k)) {
+        //     console.error(`[ModdedFeatsAddon] mergeFeatsObject() key already exists, will be overwrite. `, [modName, k, cloneDeep(b), cloneDeep(o)]);
+        //     logger.error(`[ModdedFeatsAddon] mergeFeatsObject() key already exists, will be overwrite: [${modName}] [${k}]`);
+        // }
+        // set(out, k, get(o, k));
+        if (out[k]) {
             console.error(`[ModdedFeatsAddon] mergeFeatsObject() key already exists, will be overwrite. `, [modName, k, cloneDeep(b), cloneDeep(o)]);
             logger.error(`[ModdedFeatsAddon] mergeFeatsObject() key already exists, will be overwrite: [${modName}] [${k}]`);
         }
-        set(out, k, get(o, k));
+        out[k] = o[k];
     }
     return out;
 }
 
 export function appendFeatsObject(b: FeatsObject, o: FeatsObject, logger: LogWrapper) {
     for (const k in o) {
-        if (has(b, k)) {
+        // if (has(b, k)) {
+        //     console.warn(`[ModdedFeatsAddon] appendFeatsObject() key already exists, will be overwrite. `, [k, cloneDeep(b), cloneDeep(o)]);
+        //     logger.warn(`[ModdedFeatsAddon] appendFeatsObject() key already exists, will be overwrite: [${k}]`);
+        // }
+        // set(b, k, get(o, k));
+        if (b[k]) {
             console.warn(`[ModdedFeatsAddon] appendFeatsObject() key already exists, will be overwrite. `, [k, cloneDeep(b), cloneDeep(o)]);
             logger.warn(`[ModdedFeatsAddon] appendFeatsObject() key already exists, will be overwrite: [${k}]`);
         }
-        set(b, k, get(o, k));
+        b[k] = o[k];
     }
 }
